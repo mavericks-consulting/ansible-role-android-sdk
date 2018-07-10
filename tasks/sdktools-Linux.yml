@@ -7,7 +7,7 @@
   get_url: url={{ android_sdk_download_location }} dest={{ android_sdk_install_location }}/sdk-download.tgz
 
 - name: Extract Android SDK tools
-  command: tar -xvf {{ android_sdk_install_location }}/sdk-download.tgz -C {{ android_sdk_install_location }}
+  command: tar -xzf {{ android_sdk_install_location }}/sdk-download.tgz -C {{ android_sdk_install_location }}
 
 - name: Put the SDK install expect script in place
   template: src=sdk-install.expect.j2 dest={{ android_sdk_install_location }}/sdk-install.expect mode=0755
